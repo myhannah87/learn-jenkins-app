@@ -3,10 +3,11 @@ pipeline {
 
     stages {
         stage('Build') {
-            agent{
-                docker{}
+            agent {
+                docker {
                     imagine 'node:18-alpine'
                     resuseNod true
+                }
             }
             steps {
                 sh '''
